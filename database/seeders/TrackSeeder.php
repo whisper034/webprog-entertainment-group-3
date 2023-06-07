@@ -13,6 +13,8 @@ class TrackSeeder extends Seeder
      */
     public function run(): void
     {
+        $nowDate = now()->timezone('Asia/Jakarta')->format('Y-m-d H:i:s');
+
         // fifty-fifty --> album_id = 1
         Track::insert([
             'album_id' => 1,
@@ -24,7 +26,8 @@ class TrackSeeder extends Seeder
             'co_producer' => 'Jinsil Baek',
             'ar_director' => 'Danny JY Lee',
             'director' => 'Jeff Kim',
-            'additional_data' => 'Music Video - NAIVE'
+            'additional_data' => 'Music Video - NAIVE',
+            'created_at' => $nowDate
         ]);
 
         Track::insert([
@@ -37,7 +40,8 @@ class TrackSeeder extends Seeder
             'co_producer' => null,
             'ar_director' => 'Danny JY Lee',
             'director' => 'Jinsil Baek, Jeff Kim',
-            'additional_data' => 'Music Video - Zanybros'
+            'additional_data' => 'Music Video - Zanybros',
+            'created_at' => $nowDate
         ]);
 
         Track::insert([
@@ -50,7 +54,8 @@ class TrackSeeder extends Seeder
             'co_producer' => 'Jinsil Baek',
             'ar_director' => 'Danny JY Lee',
             'director' => 'Jeff Kim',
-            'additional_data' => 'Lyric Video by Danny JY Lee'
+            'additional_data' => 'Lyric Video by Danny JY Lee',
+            'created_at' => $nowDate
         ]);
 
         Track::insert([
@@ -63,7 +68,8 @@ class TrackSeeder extends Seeder
             'co_producer' => 'Jinsil Baek',
             'ar_director' => 'Danny JY Lee',
             'director' => 'Jeff Kim',
-            'additional_data' => 'Music Video - Byunghak Park, Sujung Jee'
+            'additional_data' => 'Music Video - Byunghak Park, Sujung Jee',
+            'created_at' => $nowDate
         ]);
 
         // new jeans --> album_id = 2
@@ -77,7 +83,8 @@ class TrackSeeder extends Seeder
             'co_producer' => null,
             'ar_director' => null,
             'director' => 'Min Hee Jin',
-            'additional_data' => 'Music Video - Wooseok Shin (DOLPHINERS FILM)'
+            'additional_data' => 'Music Video - Wooseok Shin (DOLPHINERS FILM)',
+            'created_at' => $nowDate
         ]);
 
         Track::insert([
@@ -90,7 +97,8 @@ class TrackSeeder extends Seeder
             'co_producer' => null,
             'ar_director' => null,
             'director' => 'Min Hee Jin',
-            'additional_data' => 'Music Video - Heewon Shin'
+            'additional_data' => 'Music Video - Heewon Shin',
+            'created_at' => $nowDate
         ]);
 
         Track::insert([
@@ -103,7 +111,8 @@ class TrackSeeder extends Seeder
             'co_producer' => null,
             'ar_director' => null,
             'director' => 'Min Hee Jin',
-            'additional_data' => 'Music Video - Dongle Shin'
+            'additional_data' => 'Music Video - Dongle Shin',
+            'created_at' => $nowDate
         ]);
 
         Track::insert([
@@ -116,7 +125,8 @@ class TrackSeeder extends Seeder
             'co_producer' => null,
             'ar_director' => null,
             'director' => 'Min Hee Jin',
-            'additional_data' => 'Music Video - Wooseok Shin (DOLPHINERS FILM)'
+            'additional_data' => 'Music Video - Wooseok Shin (DOLPHINERS FILM)',
+            'created_at' => $nowDate
         ]);
 
         Track::insert([
@@ -129,7 +139,8 @@ class TrackSeeder extends Seeder
             'co_producer' => null,
             'ar_director' => null,
             'director' => 'Min Hee Jin',
-            'additional_data' => 'Music Video - Heewon Shin'
+            'additional_data' => 'Music Video - Heewon Shin',
+            'created_at' => $nowDate
         ]);
 
         Track::insert([
@@ -142,7 +153,8 @@ class TrackSeeder extends Seeder
             'co_producer' => null,
             'ar_director' => null,
             'director' => 'Min Hee Jin',
-            'additional_data' => 'Music Video - Heewon Shin'
+            'additional_data' => 'Music Video - Heewon Shin',
+            'created_at' => $nowDate
         ]);
 
         // itzy --> album_id = 3
