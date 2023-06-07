@@ -1,0 +1,13 @@
+body {
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+.navigation-bar ul li {
+    padding: 0.8rem 0.4rem;
+}
+
+.navigation-bar ul li:hover {
+    background-color: #cca0a0;
+    padding: 0.8rem 0.4rem;
+}
