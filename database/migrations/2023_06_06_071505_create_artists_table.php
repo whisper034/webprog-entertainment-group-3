@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id('artist_id');
             $table->unsignedBigInteger('artist_group_id');
             $table->string('name');
-            $table->string('nickname');
-            $table->date('date_of_birth');
+            $table->string('date_of_birth');
             $table->string('photo_url');
             $table->string('photo_url_hovered');
             $table->longText('biodata');

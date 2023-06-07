@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // pas mau milih salah satu albumnya, gambarnya dihardcode aja
         Schema::create('albums', function (Blueprint $table) {
             $table->id('album_id');
             $table->unsignedBigInteger('artist_group_id');

@@ -13,8 +13,9 @@ class AlbumSeeder extends Seeder
      */
     public function run(): void
     {
-        // fifty-fifty
+        // fifty-fifty --> artist_group_id = 1
         Album::insert([
+            'artist_group_id' => 1,
             'album_photo_url' => '/images/album/album_photo/fifty_fifty.png',
             'group_photo_url' => '/images/album/artist_photo/fifty_fifty.png',
             'album_info' => "Introducing \"FIFTY\", the highly anticipated album from the sensational girl group, Fifty-Fifty! With their magnetic presence and undeniable talent, Fifty-Fifty has taken the music industry by storm, capturing the hearts of fans around the world. This album represents a significant milestone in their musical journey, showcasing their growth, maturity, and artistic prowess.\n
@@ -24,8 +25,9 @@ class AlbumSeeder extends Seeder
             Prepare to be enchanted as you delve into the world of \"FIFTY\" and experience the magic that Fifty-Fifty has crafted. Their infectious energy, exceptional talent, and undeniable charisma will keep you captivated from the very first note to the final chord. Join the ride and witness the unstoppable rise of Fifty-Fifty with their groundbreaking album, \"FIFTY\"."
         ]);
 
-        // new jeans
+        // new jeans --> artist_group_id = 2
         Album::insert([
+            'artist_group_id' => 2,
             'album_photo_url' => '/images/album/album_photo/new_jeans.png',
             'group_photo_url' => '/images/album/artist_photo/new_jeans.png',
             'album_info' => "Introducing \"NWJNS\", the groundbreaking album from the phenomenal girl group, NewJeans! Comprised of a talented and accomplished lineup of young members, NewJeans has taken the music scene by storm with their incredible achievements and remarkable talent.\n
@@ -35,8 +37,9 @@ class AlbumSeeder extends Seeder
             Join NewJeans on this exhilarating musical adventure as they continue to make waves in the industry. Brace yourself for the impact of \"NWJNS\" and witness the rise of NewJeans as they carve their path to success, leaving an indelible mark on the world of K-pop. Get ready to groove, feel, and be inspired by the incredible talent of NewJeans and their groundbreaking album, \"NWJNS\"."
         ]);
 
-        // itzy
+        // itzy --> artist_group_id = 3
         Album::insert([
+            'artist_group_id' => 3,
             'album_photo_url' => '/images/album/album_photo/itzy.png',
             'group_photo_url' => '/images/album/artist_photo/itzy.png',
             'album_info' => "GUESS WHO\n
@@ -51,8 +54,9 @@ class AlbumSeeder extends Seeder
             The music video sets a high-tension mood, which is based on the Mafia game, showing psychological warfare between various appearance of ITZY. The members arouse the viewers’ curiosity by hiding their true emotions in the daytime and then doing a one eighty in the nighttime, entertaining us with different forms of themselves like movie characters. It throws hidden clues throughout the music video, and asks the viewers to 'GUESS WHO' the mafia is."
         ]);
 
-        // aespa
+        // aespa --> artist_group_id = 4
         Album::insert([
+            'artist_group_id' => 4,
             'album_photo_url' => '/images/album/album_photo/aespa.png',
             'group_photo_url' => '/images/album/artist_photo/aespa.png',
             'album_info' => "GIRLS\n
