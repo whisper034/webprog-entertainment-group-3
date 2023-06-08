@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('about_info_id');
             $table->string('type');
             $table->longText('description');
-            $table->timestamps('created_at');
+            $table->dateTime('created_at');
             $table->dateTime('updated_at');
             $table->dateTime('deleted_at');
         });

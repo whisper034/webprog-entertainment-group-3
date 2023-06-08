@@ -15,15 +15,15 @@ return new class extends Migration
             $table->id('track_id');
             $table->unsignedBigInteger('album_id');
             $table->string('title');
-            $table->string('composer');
-            $table->string('lyrics_by');
-            $table->string('arranger');
-            $table->string('producer');
-            $table->string('co_producer');
-            $table->string('ar_director');
-            $table->string('director');
-            $table->string('additional_data');
-            $table->timestamps('created_at');
+            $table->string('composer')->nullable();
+            $table->string('lyrics_by')->nullable();
+            $table->string('arranger')->nullable();
+            $table->string('producer')->nullable();
+            $table->string('co_producer')->nullable();
+            $table->string('ar_director')->nullable();
+            $table->string('director')->nullable();
+            $table->string('additional_data')->nullable();
+            $table->dateTime('created_at');
             $table->dateTime('updated_at');
             $table->dateTime('deleted_at');
 

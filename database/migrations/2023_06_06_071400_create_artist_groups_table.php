@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('group_name');
             $table->string('group_photo_url');
             $table->string('group_photo_url_hovered');
-            $table->timestamps('created_at');
+            $table->dateTime('created_at');
             $table->dateTime('updated_at');
             $table->dateTime('deleted_at');
         });
