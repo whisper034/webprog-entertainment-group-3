@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('album_photo_url');
             $table->string('group_photo_url');
             $table->longText('album_info');
-            $table->timestamps('created_at');
+            $table->dateTime('created_at');
             $table->dateTime('updated_at');
             $table->dateTime('deleted_at');
 

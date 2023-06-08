@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('photo_url');
             $table->string('photo_url_hovered');
             $table->longText('biodata');
-            $table->timestamps('created_at');
+            $table->dateTime('created_at');
             $table->dateTime('updated_at');
             $table->dateTime('deleted_at');
 
