@@ -13,7 +13,16 @@ class ArtistGroupController extends Controller
      */
     public function index()
     {
-        //
+        $artistGroupItems = ArtistGroup::orderBy('artist_group_id')->get();
+        $totalGroup = count($artistGroupItems);
+        $gridRowCol = ceil($totalGroup / 2);
+
+        return view('/main/home', [
+            'active' => 'artist_group',
+            'artistGroupItems' => $artistGroupItems,
+            'totalGroup' => $totalGroup,
+            'gridRowCol' => $gridRowCol
+        ]);
     }
 
     /**

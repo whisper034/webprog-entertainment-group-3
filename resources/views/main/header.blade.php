@@ -7,12 +7,12 @@
     <div class="text-end navigation-bar">
         <ul class="nav d-flex justify-content-evenly align-items-center container-fluid" style="">
             <li class="nav-item">
-                <a class="d-flex justify-content-center align-items-center nav-link" href="#">
+                <a class="d-flex justify-content-center align-items-center nav-link" href="/">
                     <span style="color: black; font-weight: bolder; font-size: 14pt;" class="navigation-a">HOME</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="d-flex justify-content-center align-items-center nav-link" href="#">
+                <a class="d-flex justify-content-center align-items-center nav-link" href="/artist-group">
                     <span style="color: black; font-weight: bolder; font-size: 14pt; " class="navigation-a">ARTISTS</span>
                 </a>
             </li>
@@ -22,7 +22,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="d-flex justify-content-center align-items-center nav-link" href="#">
+                <a class="d-flex justify-content-center align-items-center nav-link" href="/about">
                     <span style="color: black; font-weight: bolder; font-size: 14pt;" class="navigation-a">ABOUT</span>
                 </a>
             </li>

@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutInfoController;
+use App\Http\Controllers\ArtistGroupController;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main.home');
-});
+Route::get('/', [Controller::class, 'home']);
+
+Route::get('/about', [AboutInfoController::class, 'index']);
+
+Route::get('/artist-group', [ArtistGroupController::class, 'index']);

@@ -13,7 +13,12 @@ class AboutInfoController extends Controller
      */
     public function index()
     {
-        //
+        $aboutItems = AboutInfo::orderBy('about_info_id')->get();
+
+        return view('/main/home', [
+            'active' => 'about',
+            'aboutItems' => $aboutItems
+        ]);
     }
 
     /**
