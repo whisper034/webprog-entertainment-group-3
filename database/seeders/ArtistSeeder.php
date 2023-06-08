@@ -54,8 +54,8 @@ class ArtistSeeder extends Seeder
             'date_of_birth' => 'July 9, 2002',
             'photo_url' => '/images/artist/original/keena.png',
             'photo_url_hovered' => '/images/artist/hovered/keena.png',
-            'biodata' => "Behind her adorable visuals, this member of FIFTY FIFTY actually holds the position of the main rapper! Additionally, she also takes on the role of sub-vocalist within the group. Daebak!
-            Prior to debuting with FIFTY FIFTY, Keena was involved in creating an OST for the drama titled The Running Mates: Human Rights. She sang a song called Take Back My Life.",
+            'biodata' => "Behind her adorable visuals, this member of FIFTY FIFTY actually holds the position of the main rapper! Additionally, she also takes on the role of sub-vocalist within the group. Daebak!\n
+            Prior to debuting with FIFTY FIFTY, Keena was involved in creating an OST for the drama titled \"The Running Mates: Human Rights.\" She sang a song called \"Take Back My Life.\"",
             'created_at' => $nowDate
         ]);
 
@@ -68,8 +68,8 @@ class ArtistSeeder extends Seeder
             'date_of_birth' => 'May 15, 2006',
             'photo_url' => '/images/artist/original/haerin.png',
             'photo_url_hovered' => '/images/artist/hovered/haerin.png',
-            'biodata' => "An interesting fact about Haerin is that her favorite foods are Korean cuisine and raw fish. Many people say that she resembles Tomie.
-            Haerin also greatly enjoys the scent of flowers. She used to play pansori, a traditional Korean genre of musical storytelling. Her nickname during school was Voice Fairy.",
+            'biodata' => "An interesting fact about Haerin is that her favorite foods are Korean cuisine and raw fish. Many people say that she resembles Tomie.\n
+            Haerin also greatly enjoys the scent of flowers. She used to play pansori, a traditional Korean genre of musical storytelling. Her nickname during school was \"Voice Fairy.\"",
             'created_at' => $nowDate
         ]);
 
@@ -79,7 +79,7 @@ class ArtistSeeder extends Seeder
             'date_of_birth' => 'April 11, 2005',
             'photo_url' => '/images/artist/original/danielle.png',
             'photo_url_hovered' => '/images/artist/hovered/danielle.png',
-            'biodata' => "Danielle has an interesting fact: she likes the spring and fall seasons. Her favorite foods are her mother's cooking, vegetables, and fruits.
+            'biodata' => "Danielle has an interesting fact: she likes the spring and fall seasons. Her favorite foods are her mother's cooking, vegetables, and fruits.\n
             What's unique about Danielle is her ability to make various shapes with her tongue and her habit of wearing socks before going to bed.",
             'created_at' => $nowDate
         ]);
@@ -90,7 +90,7 @@ class ArtistSeeder extends Seeder
             'date_of_birth' => 'October 6, 2004',
             'photo_url' => '/images/artist/original/hanni.png',
             'photo_url_hovered' => '/images/artist/hovered/hanni.png',
-            'biodata' => "An interesting fact about Hanni is that she likes all seasons except for summer. Her favorite foods are bread and meat. She is also skilled at playing the ukulele and is a big fan of One Direction.
+            'biodata' => "An interesting fact about Hanni is that she likes all seasons except for summer. Her favorite foods are bread and meat. She is also skilled at playing the ukulele and is a big fan of One Direction.\n
             Additionally, a notable trait of Hanni is her ability to sleep anywhere. She also has a unique hobby of photographing clouds.",
             'created_at' => $nowDate
         ]);
@@ -101,7 +101,7 @@ class ArtistSeeder extends Seeder
             'date_of_birth' => 'April 21, 2008',
             'photo_url' => '/images/artist/original/hyein.png',
             'photo_url_hovered' => '/images/artist/hovered/hyein.png',
-            'biodata' => "Hyein, the maknae, has a strong liking for strawberries. She is currently learning English as her second language.
+            'biodata' => "Hyein, the maknae, has a strong liking for strawberries. She is currently learning English as her second language.\n
             An interesting fact about Hyein is her skill in taking photos of the other members. She also started her career as a child model at the age of 8.",
             'created_at' => $nowDate
         ]);
@@ -112,7 +112,7 @@ class ArtistSeeder extends Seeder
             'date_of_birth' => 'May 7, 2004',
             'photo_url' => '/images/artist/original/minji.png',
             'photo_url_hovered' => '/images/artist/hovered/minji.png',
-            'biodata' => "It turns out that Minji has the ESTJ personality type according to the Myers-Briggs Type Indicator (MBTI). A brief explanation of the ESTJ type is that they are practical, realistic, fact-oriented, and decisive.
+            'biodata' => "It turns out that Minji has the ESTJ personality type according to the Myers-Briggs Type Indicator (MBTI). A brief explanation of the ESTJ type is that they are practical, realistic, fact-oriented, and decisive.\n
             Minji attended Hanlim Arts School. She also enjoys both the summer and winter seasons. Her favorite food is her mother's cooking and ice cream.",
             'created_at' => $nowDate
         ]);
@@ -125,7 +125,7 @@ class ArtistSeeder extends Seeder
             'date_of_birth' => 'May 26, 2000',
             'photo_url' => '/images/artist/original/yeji.png',
             'photo_url_hovered' => '/images/artist/hovered/yeji.png',
-            'biodata' => "Yeji is the official leader of ITZY. She is also the oldest member of the group. In 2018, prior to to her debut with Itzy, she participated in SBS’ show The Fan but was eliminated in episode 5. Her motto is believe in yourself. Her English name is Lucy Hwang.",
+            'biodata' => "Yeji is the official leader of ITZY. She is also the oldest member of the group. In 2018, prior to to her debut with Itzy, she participated in SBS’ show The Fan but was eliminated in episode 5. Her motto is \"believe in yourself\". Her English name is Lucy Hwang.",
             'created_at' => $nowDate
         ]);
 
@@ -177,7 +177,7 @@ class ArtistSeeder extends Seeder
             'date_of_birth' => 'April 11, 2000',
             'photo_url' => '/images/artist/original/karina.png',
             'photo_url_hovered' => '/images/artist/hovered/karina.png',
-            'biodata' => "Karina is the official leader of aespa. She also holds the position of main dancer, lead rapper, and center. She is the tallest member in the group with a height of 167.8 cm (5'6''). Prior to her debut, Karina was a famous ulzzang (which means best face or good looking in Korean). She was a trainee for four years.",
+            'biodata' => "Karina is the official leader of aespa. She also holds the position of main dancer, lead rapper, and center. She is the tallest member in the group with a height of 167.8 cm (5'6). Prior to her debut, Karina was a famous ulzzang (which means best face or good looking in Korean). She was a trainee for four years.",
             'created_at' => $nowDate
         ]);
 
