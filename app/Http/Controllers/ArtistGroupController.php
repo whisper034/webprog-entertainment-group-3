@@ -11,7 +11,7 @@ class ArtistGroupController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function viewArtistGroup()
     {
         $artistGroupItems = ArtistGroup::orderBy('artist_group_id')->get();
         $totalGroup = count($artistGroupItems);
@@ -19,6 +19,7 @@ class ArtistGroupController extends Controller
 
         return view('/main/home', [
             'active' => 'artist_group',
+            'active_artist_group' => true,
             'artistGroupItems' => $artistGroupItems,
             'totalGroup' => $totalGroup,
             'gridRowCol' => $gridRowCol

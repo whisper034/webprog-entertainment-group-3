@@ -16,7 +16,11 @@
     @if($active == 'about')
         @include('containers.container-about')
     @elseif($active == 'artist_group')
-        @include('containers.container-artist-group')
+        @if($active_artist_group)
+            @include('containers.container-artist-group')
+        @else
+            @include('containers.container-artist')
+        @endif
     @else
         @include('containers.container-home')
     @endif

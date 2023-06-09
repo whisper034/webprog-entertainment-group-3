@@ -11,9 +11,9 @@ class AlbumController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function viewAlbum()
     {
-        //
+
     }
 
     /**

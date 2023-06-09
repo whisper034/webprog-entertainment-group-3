@@ -11,7 +11,7 @@ class TrackController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function viewTrack()
     {
         //
     }

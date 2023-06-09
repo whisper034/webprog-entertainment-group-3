@@ -11,7 +11,7 @@ class AboutInfoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function viewAbout()
     {
         $aboutItems = AboutInfo::orderBy('about_info_id')->get();
 

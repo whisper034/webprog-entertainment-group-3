@@ -13,25 +13,25 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <a href="">
+                <a href="/artist-group/1">
                     <img src="{{ asset('/images/home/slide_1.png') }}" alt="slide 1" class=""
                          style="width: 100vw; height: 100vh; object-fit: cover;">
                 </a>
             </div>
             <div class="carousel-item">
-                <a href="">
+                <a href="/artist-group/2">
                     <img src="{{ asset('/images/home/slide_2.png') }}" alt="slide 2" class=""
                          style="width: 100vw; height: 100vh; object-fit: cover;">
                 </a>
             </div>
             <div class="carousel-item">
-                <a href="">
+                <a href="/artist-group/3">
                     <img src="{{ asset('/images/home/slide_3.png') }}" alt="slide 3" class=""
                          style="width: 100vw; height: 100vh; object-fit: cover;">
                 </a>
             </div>
             <div class="carousel-item">
-                <a href="">
+                <a href="/artist-group/4">
                     <img src="{{ asset('/images/home/slide_4.png') }}" alt="slide 4" class=""
                          style="width: 100vw; height: 100vh; object-fit: cover;">
                 </a>
