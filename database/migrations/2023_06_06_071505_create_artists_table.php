@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('photo_url_hovered');
             $table->longText('biodata');
             $table->dateTime('created_at');
-            $table->dateTime('updated_at');
-            $table->dateTime('deleted_at');
+            $table->dateTime('updated_at')->nullable();
+            $table->dateTime('deleted_at')->nullable();
 
             $table->foreign('artist_group_id')->references('artist_group_id')->on('artist_groups')->onDelete('cascade');
         });

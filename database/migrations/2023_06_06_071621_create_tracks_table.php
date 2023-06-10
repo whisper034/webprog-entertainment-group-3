@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('director')->nullable();
             $table->string('additional_data')->nullable();
             $table->dateTime('created_at');
-            $table->dateTime('updated_at');
-            $table->dateTime('deleted_at');
+            $table->dateTime('updated_at')->nullable();
+            $table->dateTime('deleted_at')->nullable();
 
             $table->foreign('album_id')->references('album_id')->on('albums')->onDelete('cascade');
         });
