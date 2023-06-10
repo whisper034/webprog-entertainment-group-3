@@ -17,8 +17,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="d-flex justify-content-center align-items-center nav-link" href="#">
-                    <span style="font-weight: bolder; font-size: 14pt;" class="navigation-a {{ $active == 'albums' ? 'active' : 'inactive' }}">ALBUMS</span>
+                <a class="d-flex justify-content-center align-items-center nav-link" href="/album">
+                    <span style="font-weight: bolder; font-size: 14pt;" class="navigation-a {{ $active == 'album' ? 'active' : 'inactive' }}">ALBUMS</span>
                 </a>
             </li>
             <li class="nav-item">

@@ -21,6 +21,12 @@
         @else
             @include('containers.container-artist')
         @endif
+    @elseif($active == 'album')
+        @if($active_track)
+            @include('containers.container-track')
+        @else
+            @include('containers.container-album')
+        @endif
     @else
         @include('containers.container-home')
     @endif

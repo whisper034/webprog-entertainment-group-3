@@ -20,6 +20,7 @@ class ArtistController extends Controller
             ->join('artist_groups', static function (JoinClause $c) {
                 $c->on('artists.artist_group_id', '=', 'artist_groups.artist_group_id');
                 $c->whereNull('artists.deleted_at');
+                $c->whereNull('artist_groups.deleted_at');
             })
             ->where('artists.artist_group_id', '=', $artist_group_id)
             ->orderBy('artists.artist_id')->get();
