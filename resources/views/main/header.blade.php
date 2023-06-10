@@ -7,23 +7,23 @@
     <div class="text-end navigation-bar">
         <ul class="nav d-flex justify-content-evenly align-items-center container-fluid" style="">
             <li class="nav-item">
-                <a class="d-flex justify-content-center align-items-center nav-link" href="#">
-                    <span style="color: black; font-weight: bolder; font-size: 14pt;" class="navigation-a">HOME</span>
+                <a class="d-flex justify-content-center align-items-center nav-link" href="/">
+                    <span style="font-weight: bolder; font-size: 14pt;" class="navigation-a {{ $active == 'home' ? 'active' : 'inactive' }}">HOME</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="d-flex justify-content-center align-items-center nav-link" href="#">
-                    <span style="color: black; font-weight: bolder; font-size: 14pt; " class="navigation-a">ARTISTS</span>
+                <a class="d-flex justify-content-center align-items-center nav-link" href="/artist-group">
+                    <span style="font-weight: bolder; font-size: 14pt; " class="navigation-a {{ $active == 'artist_group' ? 'active' : 'inactive' }}">ARTISTS</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="d-flex justify-content-center align-items-center nav-link" href="#">
-                    <span style="color: black; font-weight: bolder; font-size: 14pt;" class="navigation-a">MUSIC VIDEO</span>
+                <a class="d-flex justify-content-center align-items-center nav-link" href="/album">
+                    <span style="font-weight: bolder; font-size: 14pt;" class="navigation-a {{ $active == 'album' ? 'active' : 'inactive' }}">ALBUMS</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="d-flex justify-content-center align-items-center nav-link" href="#">
-                    <span style="color: black; font-weight: bolder; font-size: 14pt;" class="navigation-a">ABOUT</span>
+                <a class="d-flex justify-content-center align-items-center nav-link" href="/about">
+                    <span style="font-weight: bolder; font-size: 14pt;" class="navigation-a {{ $active == 'about' ? 'active' : 'inactive' }}">ABOUT</span>
                 </a>
             </li>
         </ul>

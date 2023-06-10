@@ -14,7 +14,7 @@ class ArtistGroupSeeder extends Seeder
     public function run(): void
     {
         $nowDate = now()->timezone('Asia/Jakarta')->format('Y-m-d H:i:s');
-        
+
         // fifty-fifty
         ArtistGroup::insert([
             'group_name' => 'Fifty-Fifty',
@@ -25,7 +25,7 @@ class ArtistGroupSeeder extends Seeder
 
         // new jeans
         ArtistGroup::insert([
-            'group_name' => 'New Jeans',
+            'group_name' => 'New-Jeans',
             'group_photo_url' => '/images/artist_group/original/new_jeans.png',
             'group_photo_url_hovered' => '/images/artist_group/hovered/new_jeans.png',
             'created_at' => $nowDate
