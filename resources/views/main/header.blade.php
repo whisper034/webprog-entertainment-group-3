@@ -26,6 +26,30 @@
                     <span style="font-weight: bolder; font-size: 14pt;" class="navigation-a {{ $active == 'about' ? 'active' : 'inactive' }}">ABOUT</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="d-flex justify-content-center align-items-center nav-link" href="/shop">
+                    <span style="font-weight: bolder; font-size: 14pt;" class="navigation-a {{ $active == 'shop' ? 'active' : 'inactive' }}">SHOP</span>
+                </a>
+            </li>
+            @if(Session::has('loginUser'))
+                <a class="d-flex justify-content-center align-items-center nav-link user-profile-button" href="{{ Session::get('loginUser')->user_id }}/profile">
+                    @if($active == 'user_profile')
+                        <img src="{{ asset('/images/logo/profile-active.png') }}" alt="profile" style="width: 45%; height: 45%;">
+                    @else
+                        <img src="{{ asset('/images/logo/profile.png') }}" alt="profile" style="width: 45%; height: 45%;">
+                    @endif
+                </a>
+            @else
+                <form action="/login" method="get">
+                    @csrf
+                    <input type="text" name="is_logged_in" value="{{ Session::get('loginUser')->user_id ?? Crypt::encrypt('no') }}" style="display: none;">
+
+                    <button type="submit" class="btn d-flex justify-content-center align-items-center nav-link login-button" style="border: solid black 1px; padding: 0.3rem 0.5rem; margin: 0 1rem;">
+                        <img src="{{ asset('/images/logo/login.png') }}" alt="profile" style="width: 23%; height: 23%; object-fit: cover;">
+                        <span class="ms-2">Login</span>
+                    </button>
+                </form>
+            @endif
         </ul>
     </div>
 </nav>
