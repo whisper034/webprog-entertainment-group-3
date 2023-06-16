@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('artist_album_photo_url_hovered');
             $table->string('album_photo_url');
             $table->string('artist_group_photo_url');
+            $table->string('artist_group_album_url');
             $table->longText('album_info');
             $table->dateTime('created_at');
             $table->dateTime('updated_at')->nullable();

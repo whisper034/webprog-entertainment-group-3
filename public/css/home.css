@@ -11,6 +11,19 @@ body {
 /*    height: 5rem; !* Set same as footer's height *!*/
 /*}*/
 
+.login-page-button {
+    background-color: #ff4654;
+    color: black;
+}
+
+.login-page-button:hover {
+    background-color: #ff717a;
+}
+
+.user-profile-button:hover {
+    opacity: 0.6;
+}
+
 .active {
     color: #ff0000;
 }
@@ -37,6 +50,36 @@ body {
 
 .navigation-footer a:hover {
     opacity: 0.6;
+}
+
+.login-button {
+    color: black;
+}
+
+.login-button:hover {
+    background-color: #ff4654;
+    color: white;
+}
+
+.signup-page-button {
+    background-color: #ffdadd;
+    color: #ff4654;
+    border: solid #ff4654 1px;
+}
+
+.signup-page-button:hover {
+    background-color: #ffa2a8;
+    color: white;
+}
+
+.back-button {
+    color: #ff4654;
+    border-radius: 10rem;
+}
+
+.back-button:hover {
+    opacity: 0.6;
+    border: solid #ff4654 1px;
 }
 
 .image-container {

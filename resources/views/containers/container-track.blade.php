@@ -10,8 +10,10 @@
         </div>
 
         <div>
-            <img src="{{ asset($albumItems->artist_group_photo_url) }}" alt="{{ $albumItems->group_name }}"
-                  class="" style="width: 70%;">
+            <a href="{{ $albumItems->artist_group_album_url }}" target="_blank">
+                <img src="{{ asset($albumItems->artist_group_photo_url) }}" alt="{{ $albumItems->group_name }}"
+                     class="" style="width: 70%;">
+            </a>
         </div>
     </div>
 

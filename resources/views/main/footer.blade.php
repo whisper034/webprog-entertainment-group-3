@@ -24,7 +24,7 @@
                          class="" style="width: 2.5rem;">
                 </a>
 
-                <a class="d-flex justify-content-center align-items-center" href="#" style="width: 30%;">
+                <a class="d-flex justify-content-center align-items-center" href="https://instagram.com/dream.entertainment_23?igshid=MzRlODBiNWFlZA==" target="_blank" style="width: 30%;">
                     <img src="{{ asset('/images/logo/ig.png') }}" alt="instagram"
                          class="" style="width: 2.5rem;">
                 </a>
