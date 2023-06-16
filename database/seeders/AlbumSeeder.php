@@ -57,8 +57,7 @@ class AlbumSeeder extends Seeder
             'artist_group_album_url' => 'https://youtu.be/_ysomCGaZLw',
             'album_info' => "GUESS WHO
             - \"Never ceasing to amaze you\" Wilder and bolder! Captivating K-pop fandom
-            - The new song \"In the morning\" completes the K-pop representative performers, ITZY! Shows off
-        ever-changing concepts!
+            - The new song \"In the morning\" completes the K-pop representative performers, ITZY! Shows off ever-changing concepts!
             - A collection of JYP's head producer J. Y. Park, and internationally recognized song writers! A comeback with the all-time best album!
             On April 30th, ITZY makes a worldwide comeback with their new album 'GUESS WHO' and title song 'In the morning'.
             ITZY's been getting love from Millennials and Gen-Z with their confidence in expressing themselves and has been captivating K-pop fans worldwide with impeccable singing and performance. Their unrivalled existence as the 'representative of the 4th gen girl groups' once again resonates their stardom with the new, wild, and sensational album 'GUESS WHO'.

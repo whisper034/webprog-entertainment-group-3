@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+use App\Models\Transaction;
 use App\Models\User;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -9,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class Controller extends BaseController
 {
@@ -117,9 +120,12 @@ class Controller extends BaseController
         ]);
     }
 
-    public function viewProfile() {
+    public function viewProfile($user_id) {
+        $transactions = (new TransactionController)->transactions($user_id);
+
         return view('/main/home', [
             'active' => 'user_profile',
+            'transaction_history' => $transactions
         ]);
     }
 }

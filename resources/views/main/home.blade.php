@@ -14,6 +14,8 @@
             Albums
         @elseif($active == 'user_profile')
             Profile
+        @elseif($active == 'shop')
+            Shop
         @else
             Home
         @endif
@@ -41,6 +43,8 @@
         @endif
     @elseif($active == 'user_profile')
         @include('containers.container-user-profile')
+    @elseif($active == 'shop')
+        @include('containers.container-shop')
     @else
         @include('containers.container-home')
     @endif
