@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign Up</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="{{ asset('/css/home.css') }}">
 </head>
 <body>
 <div class="d-flex align-items-center" style="justify-content: space-between; margin: 3rem 7rem;">

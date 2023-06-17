@@ -20,12 +20,15 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
+            UserSeeder::class,
             ArtistGroupSeeder::class,
             AboutInfoSeeder::class,
             AlbumSeeder::class,
             ArtistSeeder::class,
             TrackSeeder::class,
-            UserSeeder::class,
+            ProductCategorySeeder::class,
+            ProductSeeder::class,
+            TransactionSeeder::class
         ]);
     }
 }

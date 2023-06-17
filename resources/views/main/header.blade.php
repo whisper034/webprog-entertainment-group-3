@@ -27,12 +27,17 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="d-flex justify-content-center align-items-center nav-link" href="/shop">
-                    <span style="font-weight: bolder; font-size: 14pt;" class="navigation-a {{ $active == 'shop' ? 'active' : 'inactive' }}">SHOP</span>
-                </a>
+                <form action="/shop" method="get">
+                    @csrf
+                    <input class="form-control d-none" type="search" aria-label="Search" id="example-search-input" name="search_by" value="{{ null }}">
+
+                    <button class="d-flex justify-content-center align-items-center nav-link shop-btn" type="submit">
+                        <span style="font-weight: bolder; font-size: 14pt;" class="navigation-a {{ $active == 'shop' ? 'active' : 'inactive' }}">SHOP</span>
+                    </button>
+                </form>
             </li>
             @if(Session::has('loginUser'))
-                <a class="d-flex justify-content-center align-items-center nav-link user-profile-button" href="{{ Session::get('loginUser')->user_id }}/profile">
+                <a class="d-flex justify-content-center align-items-center nav-link user-profile-button" href="/{{ Session::get('loginUser')->user_id }}/profile">
                     @if($active == 'user_profile')
                         <img src="{{ asset('/images/logo/profile-active.png') }}" alt="profile" style="width: 45%; height: 45%;">
                     @else

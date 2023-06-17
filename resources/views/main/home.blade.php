@@ -14,12 +14,14 @@
             Albums
         @elseif($active == 'user_profile')
             Profile
+        @elseif($active == 'shop')
+            Shop
         @else
             Home
         @endif
     </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="{{ asset('/css/home.css') }}">
 </head>
 <body>
 @include('main.header')
@@ -41,6 +43,8 @@
         @endif
     @elseif($active == 'user_profile')
         @include('containers.container-user-profile')
+    @elseif($active == 'shop')
+        @include('containers.container-shop')
     @else
         @include('containers.container-home')
     @endif
