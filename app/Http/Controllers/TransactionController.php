@@ -29,7 +29,7 @@ class TransactionController extends Controller
             // ubah format harganya
             $product[0]['ind_price'] = 'Rp'.number_format($product[0]['product_price'], 2, ",", ".");
 
-            // simpan data coffee di transaction
+            // simpan data produk di transaction
             $transactionValue->product_name = $product[0]['product_name'];
             $transactionValue->ind_price = $product[0]['ind_price'];
             $transactionValue->product_photo_url = $product[0]['product_photo_url'];

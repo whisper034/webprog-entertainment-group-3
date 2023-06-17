@@ -84,49 +84,57 @@
         <br>
 
         <div class="ms-5 me-5">
-            <div style="color: #ff4f5d;" class="mb-2">
+            <div style="color: #ff4f5d; font-size: 16pt;" class="mb-2">
                 Recent Transactions
             </div>
 
-            @php($counter = 0)
-            @foreach($transactionHistory as $transactionHistoryKey => $transactionValue)
-                @if($counter == 3)
-                    @break
-                @endif
-
-                @php($counter++)
-
-                <div style="background-color: #ffbcc2; border-radius: 1rem;" class="mb-lg-4 p-3 shadow">
-                    <table style="width: 100%;" class="transaction-history-table">
-                        <colgroup>
-                            <col style="width: 50%;">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                            <td>Product</td>
-                            <td style="text-align: right;">{{ $transactionValue['product_name'] }}</td>
-                        </tr>
-                        <tr>
-                            <td>Price</td>
-                            <td style="text-align: right;">{{ $transactionValue['ind_price'] }}</td>
-                        </tr>
-                        <tr>
-                            <td>Quantity</td>
-                            <td style="text-align: right;">1</td>
-                        </tr>
-                        <tr>
-                            <td>Total Price</td>
-                            <td style="text-align: right;">{{ $transactionValue['ind_price'] }}</td>
-                        </tr>
-                        </tbody>
-                    </table>
+            @if($transactionHistory->isEmpty())
+                <div style="font-size: 14pt;">
+                    No transactions made.
                 </div>
-            @endforeach
+            @else
+                @php($counter = 0)
+                @foreach($transactionHistory as $transactionHistoryKey => $transactionValue)
+                    @if($counter == 3)
+                        @break
+                    @endif
 
-            <div data-bs-toggle="modal" data-bs-target="#tr-modal" class="text-center button-see-all" style="">
-                See All
-            </div>
+                    @php($counter++)
+
+                    <div style="background-color: #ffbcc2; border-radius: 1rem;" class="mb-lg-4 p-3 shadow">
+                        <table style="width: 100%;" class="transaction-history-table">
+                            <colgroup>
+                                <col style="width: 50%;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <td>Product</td>
+                                <td style="text-align: right;">{{ $transactionValue['product_name'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Price</td>
+                                <td style="text-align: right;">{{ $transactionValue['ind_price'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Quantity</td>
+                                <td style="text-align: right;">1</td>
+                            </tr>
+                            <tr>
+                                <td>Total Price</td>
+                                <td style="text-align: right;">{{ $transactionValue['ind_price'] }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                @endforeach
+            @endif
+
+            @if(sizeof($transactionHistory) > 3)
+                <div data-bs-toggle="modal" data-bs-target="#tr-modal" class="text-center button-see-all" style="">
+                    See All
+                </div>
+            @endif
         </div>
 
         <div class="modal fade" id="tr-modal" aria-labelledby="transaction_history" aria-hidden="true">
