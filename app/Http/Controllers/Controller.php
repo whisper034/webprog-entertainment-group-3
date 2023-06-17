@@ -111,12 +111,12 @@ class Controller extends BaseController
             'created_at' => $nowDate
         ]);
 
-        return redirect('/success');
+        return redirect('/sign-up/success');
     }
 
-    public function signUpSuccess() {
-        return view('auth.signup-success',[
-
+    public function successPage($active) {
+        return view('main.success-page',[
+            'active' => $active
         ]);
     }
 
@@ -125,7 +125,7 @@ class Controller extends BaseController
 
         return view('/main/home', [
             'active' => 'user_profile',
-            'transaction_history' => $transactions
+            'transactionHistory' => $transactions
         ]);
     }
 }

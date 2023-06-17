@@ -8,7 +8,7 @@ use App\Http\Requests\StoreTransactionRequest;
 use App\Http\Requests\UpdateTransactionRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class TransactionController extends Controller
@@ -24,15 +24,15 @@ class TransactionController extends Controller
 
         foreach ($transactions as $transactionKey => $transactionValue) {
             // cari coffee yang dibeli
-            $product = Product::where('id', $transactionValue->coffee_id)->get();
+            $product = Product::where('product_id', $transactionValue->product_id)->get();
 
             // ubah format harganya
-            $product[0]['ind_price'] = 'Rp'.number_format($product[0]['price'], 2, ",", ".");
+            $product[0]['ind_price'] = 'Rp'.number_format($product[0]['product_price'], 2, ",", ".");
 
             // simpan data coffee di transaction
-            $transactionValue->coffee_name = $product[0]['coffee_name'];
+            $transactionValue->product_name = $product[0]['product_name'];
             $transactionValue->ind_price = $product[0]['ind_price'];
-            $transactionValue->image_source = $product[0]['image_source'];
+            $transactionValue->product_photo_url = $product[0]['product_photo_url'];
 
             // ubah format date transaction_date
             $transactionValue->transaction_date_formatted = date('d F Y', strtotime
@@ -43,21 +43,17 @@ class TransactionController extends Controller
         return $transactions;
     }
 
+    // belum ada handler dan transaction query (BEGIN, COMMIT, ROLLBACK)
     public function buyProduct(Request $request) {
-        try {
-            Transaction::insert([
-                'user_id' => $request->user_id,
-                'product_id' => $request->product_id,
-                'transaction_date' => $request->transaction_date
-            ]);
+        $nowDate = now()->timezone('Asia/Jakarta')->format('Y-m-d H:i:s');
 
-            DB::commit();
-            return redirect()->back();
-        }
-        catch (\Exception $e) {
-            DB::rollBack();
-            return redirect()->back();
-        }
+        Transaction::insert([
+            'user_id' => $request->user_id,
+            'product_id' => $request->product_id,
+            'transaction_date' => $nowDate
+        ]);
+
+        return redirect('/transaction/success');
     }
 
     /**

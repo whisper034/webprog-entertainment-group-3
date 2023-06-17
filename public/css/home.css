@@ -39,17 +39,34 @@ body {
     height: 6.5rem;
 }
 
-.navigation-bar ul li {
-    padding: 0.8rem 0.4rem;
+.shop-btn {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
-.navigation-bar ul li:hover {
+.navigation-bar ul li a, .shop-btn {
+    padding: 1.3rem 1.2rem;
+}
+
+.navigation-bar ul li a:hover, .shop-btn:hover {
     background-color: #cca0a0;
-    padding: 0.8rem 0.4rem;
 }
 
 .navigation-footer a:hover {
     opacity: 0.6;
+}
+
+.log-out-button {
+    background-color: #ff4654;
+}
+
+.log-out-button:hover {
+    background-color: #ff8a93;
 }
 
 .login-button {
@@ -110,4 +127,40 @@ body {
 .image-container:hover .image-original {
     /*opacity: 0;*/
     /*transition: .3s ease;*/
+}
+
+.transaction-history-table td {
+    font-weight: bold;
+}
+
+.button-see-all {
+    color: #ff4f5d;
+}
+
+.button-see-all:hover {
+    color: #ff878d;
+    cursor: pointer;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    box-shadow: 0.3rem 0.3rem #c4c4c4;
+}
+
+.btn-modal {
+    background-color: #ff4654;
+    color: black;
+}
+
+.btn-modal:hover {
+    background-color: #ff8289;
+    color: black;
+}
+
+.search-button:hover {
+    border: solid black 1px;
+    background-color: #ff8289;
 }

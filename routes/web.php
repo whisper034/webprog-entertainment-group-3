@@ -7,6 +7,7 @@ use App\Http\Controllers\ArtistGroupController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TrackController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Middleware\IsLoggedIn;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,9 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
+// success page
+Route::get('/{active}/success', [Controller::class, 'successPage']);
+
 // login
 Route::get('/login', [Controller::class, 'loginPage'])->middleware(IsLoggedIn::class);
 Route::post('/login', [Controller::class, 'loginUser']);
@@ -36,7 +40,6 @@ Route::post('/logout', [Controller::class, 'logout']);
 // sign up
 Route::get('/sign-up', [Controller::class, 'signUpPage'])->middleware(IsLoggedIn::class);
 Route::post('/sign-up', [Controller::class, 'signUpUser']);
-Route::get('/success', [Controller::class, 'signUpSuccess']);
 
 // home
 Route::get('/home', [Controller::class, 'home']);
@@ -57,5 +60,4 @@ Route::get('/{user_id}/profile', [Controller::class, 'viewProfile']);
 
 // shop
 Route::get('/shop', [ProductController::class, 'viewShop']);
-Route::post('/shop', [ProductController::class, 'viewShopFiltered']);
-//Route::post('/search', [ProductController::class, 'search']);
+Route::post('/buy', [TransactionController::class, 'buyProduct']);

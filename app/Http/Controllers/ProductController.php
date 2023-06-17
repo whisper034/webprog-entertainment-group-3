@@ -6,61 +6,72 @@ use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Database\Query\JoinClause;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Request;
 
 class ProductController extends Controller
 {
+    private ?string $searchParam = null;
+
     /**
      * Display a listing of the resource.
      */
-    private function formatPriceInd($products): void
+    private function formatPriceInd($products)
     {
         foreach ($products as $productKey => $productValue) {
             // ubah format harganya
-            $productValue['ind_price'] = 'Rp'.number_format($productValue['price'], 2, ",", ".");
+            $productValue->ind_price = 'Rp'.number_format($productValue->product_price, 0, ",", ".");
         }
+
+        return $products;
     }
 
-    // ini masih harus dilengkapin dan ditest
-    public function viewShop($filter) {
+    public function viewShop(Request $request) {
+        // kalau ada filter
+//        if (!empty($filter->filter_by)) {
+//            $productItems = DB::table('products')
+//                ->join('product_categories', static function (JoinClause $c) {
+//                    $c->on('products.product_category_id', '=', 'product_categories.product_category_id');
+//                    $c->whereNull('products.deleted_at');
+//                    $c->whereNull('product_categories.deleted_at');
+//                })
+//                ->where('products.product_category_id', '=', $filter->filter_by)
+//                ->orderBy('products.product_id')
+//                ->paginate(3);
+//        }
+
+        if (!empty($request->all()['search_by'])) {
+            $this->searchParam = $request->all()['search_by'];
+        }
+
+        // kalau ada search
         $productItems = DB::table('products')
             ->join('product_categories', static function (JoinClause $c) {
                 $c->on('products.product_category_id', '=', 'product_categories.product_category_id');
                 $c->whereNull('products.deleted_at');
                 $c->whereNull('product_categories.deleted_at');
             })
-            ->orderBy('products.product_id')->get();
-
-        // kalau ada filter
-        if (!empty($filter->filter_by)) {
-            $productItems->where('products.product_category_id', '=', $filter->filter_by);
-        }
-
-        // kalau ada search
-        if (!empty($filter->search_by)) {
-            $productItems->whereRaw("product_name LIKE '%".$filter->search_by."%' OR product_description LIKE '%"
-                .$filter->search_by."%'");
-        }
+            ->where(function ($query) use ($request) {
+                if (($search = $this->searchParam)) {
+                    $query
+                        ->orWhere('product_name', 'LIKE', '%' . $search . '%')
+                        ->orWhere('product_description', 'LIKE', '%' . $search . '%')
+                        ->orWhere('product_category_name', 'LIKE', '%' . $search . '%');
+                    }
+                }
+            )
+            ->orderBy('products.product_id')
+            ->paginate(3);
 
         // ubah format harganya
-        $this->formatPriceInd($productItems);
+        $productItems = $this->formatPriceInd($productItems);
 
         return view('/main/home', [
             'active' => "shop",
-            'productItems' => $productItems,
-            'filterBy' => $filter->filter_by,
-            'searchBy' => $filter->search_by,
+            'productItems' => ($productItems ?? null),
+            'searchBy' => ($request->all()['search_by'] ?? null),
         ]);
     }
-
-    public function viewShopFiltered(Request $request) {
-        return $this->viewShop($request->all());
-    }
-//
-//    public function search(Request $request) {
-//        return $this->viewShop(null, $request->all());
-//    }
 
     /**
      * Show the form for creating a new resource.

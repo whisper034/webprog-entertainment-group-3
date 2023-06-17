@@ -82,8 +82,7 @@ class ProductSeeder extends Seeder
 
         Product::insert([
             'product_category_id' => 1,
-            // ganti urlnya nanti
-            'product_photo_url' => '/images/products/albums/.png',
+            'product_photo_url' => '/images/products/albums/New_Jeans_(EP).jpg',
             'product_name' => 'NEW JEANS - NEW JEANS (New Jeans 1st EP Album)',
             'product_description' => "NEW JEANS - NEW JEANS (1st EP Album)
             Detail:
@@ -108,9 +107,8 @@ class ProductSeeder extends Seeder
         // others
         Product::insert([
             'product_category_id' => 2,
-            // ganti urlnya nanti
-            'product_photo_url' => '/images/products/others/aespa-girls.png',
-            'product_name' => 'AESPA OFFICIAL LIGHTSICK',
+            'product_photo_url' => '/images/products/others/aespa-lightstick.png',
+            'product_name' => 'AESPA OFFICIAL LIGHTSTICK',
             'product_description' => "This official aespa Fanlight is a must-haves for any aespa tour. Represent your love for the group with the vibrant and colorful fanlight. Shine and cheer for aespa together!",
             'product_price' => 830000,
             'created_at' => $nowDate
@@ -118,8 +116,7 @@ class ProductSeeder extends Seeder
 
         Product::insert([
             'product_category_id' => 2,
-            // ganti urlnya nanti
-            'product_photo_url' => '/images/products/others/aespa-girls.png',
+            'product_photo_url' => '/images/products/others/NewJeans-lightstick.jpg',
             'product_name' => 'NEWJEANS - OFFICIAL LIGHTSTICK',
             'product_description' => "NEWJEANS Official Light Stick
             Contents
